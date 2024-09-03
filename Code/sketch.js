@@ -45,9 +45,6 @@ function resetarVariaveis() {
     definirMatrizInicial();
 }
 
-function verificacaoVitoria() {
-    
-}
 function preload() {
   imagemEducador = loadImage("aquiles.jpg");
   imagemAluno = loadImage("chico.jpeg");

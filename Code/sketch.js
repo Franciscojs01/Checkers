@@ -52,11 +52,11 @@ function realizarMovimento(tela, coluna, linha, colunaClicada, linhaClicada) {
 
         if (jogador == 1) {
             if (direcaoLinha == 2 && direcaoColuna == 2 || direcaoLinha == 2 && direcaoColuna == -2) {
-                const verificaoColuna = colunaClicada + direcaoColuna / 2;
-                const verificaoLinha = linhaClicada + direcaoLinha / 2;
+                const pecaColunaIntermediaria = colunaClicada + direcaoColuna / 2;
+                const pecaLinhaIntermediaria = linhaClicada + direcaoLinha / 2;
 
-                if (matriz[verificaoLinha][verificaoColuna] == 2 && matriz[linha][coluna] == 0) {
-                    matriz[verificaoLinha][verificaoColuna] = 0;
+                if (matriz[pecaLinhaIntermediaria][pecaColunaIntermediaria] == 2 && matriz[linha][coluna] == 0) {
+                    matriz[pecaLinhaIntermediaria][pecaColunaIntermediaria] = 0;
                     matriz[linha][coluna] = 1;
                     matriz[linhaClicada][colunaClicada] = 0;
                     jogador = 2;
@@ -86,11 +86,11 @@ function realizarMovimento(tela, coluna, linha, colunaClicada, linhaClicada) {
 
         } else if (jogador == 2) {
             if (direcaoLinha == -2 && direcaoColuna == 2 || direcaoLinha == -2 && direcaoColuna == -2) {
-                verificaoColuna = colunaClicada + direcaoColuna / 2;
-                verificaoLinha = linhaClicada + direcaoLinha / 2;
+                pecaColunaIntermediaria = colunaClicada + direcaoColuna / 2;
+                pecaLinhaIntermediaria = linhaClicada + direcaoLinha / 2;
 
-                if (matriz[verificaoLinha][verificaoColuna] == 1 && matriz[linha][coluna] == 0) {
-                    matriz[verificaoLinha][verificaoColuna] = 0;
+                if (matriz[pecaLinhaIntermediaria][pecaColunaIntermediaria] == 1 && matriz[linha][coluna] == 0) {
+                    matriz[pecaLinhaIntermediaria][pecaColunaIntermediaria] = 0;
                     matriz[linha][coluna] = 2;
                     matriz[linhaClicada][colunaClicada] = 0;
                     jogador = 1;

@@ -1,1 +1,2 @@
-### Checkers Game, One piece theme.
+# Checkers Game
+## Theme One Piece

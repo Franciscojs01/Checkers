@@ -45,6 +45,8 @@ function resetarVariaveis() {
     definirMatrizInicial();
 }
 
+//implementar condição de vitória.
+
 function realizarMovimento(tela, coluna, linha, colunaClicada, linhaClicada) {
     if (tela == 1) {
         const direcaoColuna = coluna - colunaClicada;

@@ -121,19 +121,19 @@ function realizarMovimento(tela, coluna, linha, colunaClicada, linhaClicada) {
 }
 
 function preload() {
-    imagemEducador = loadImage("../../assets/images/aquiles.jpg");
-    imagemAluno = loadImage("../../assets/images/chico.jpeg");
-    imagemTabuleiro = loadImage("../../assets/images/board.png");
-    gif = loadImage("../../assets/images/luffyGif.gif");
-    imagemBattle = loadImage("../../assets/images/fundo.jpg");
-    imagemVegaPunk = loadImage("../../assets/images/vegapunk.png");
-    imagemKaidou = loadImage("../../assets/images/kaidou.png");
-    imagemLuffy = loadImage("../../assets/images/luffy.png");
-    imagemLuffy_selecionado = loadImage("../../assets/images/luffy_selecionado.png");
-    imagemKaidou_selecionado = loadImage("../../assets/images/kaidou_selecionado.png");
-    musica = loadSound("../../assets/sounds/soundtrack.mp3");
-    movimento = loadSound("../../assets/sounds/movimento.mp3");
-    somMenu = loadSound("../../assets/sounds/button menu.mp3");
+    imagemEducador = loadImage("aquiles.jpg");
+    imagemAluno = loadImage("chico.jpeg");
+    imagemTabuleiro = loadImage("board.png");
+    gif = loadImage("luffyGif.gif");
+    imagemBattle = loadImage("fundo.jpg");
+    imagemVegaPunk = loadImage("vegapunk.png");
+    imagemKaidou = loadImage("kaidou.png");
+    imagemLuffy = loadImage("luffy.png");
+    imagemLuffy_selecionado = loadImage("luffy_selecionado.png");
+    imagemKaidou_selecionado = loadImage("kaidou_selecionado.png");
+    musica = loadSound("soundtrack.mp3");
+    movimento = loadSound("movimento.mp3");
+    somMenu = loadSound("button menu.mp3");
 }
 
 function setup() {

@@ -1,7 +1,7 @@
 {
   "name": "checkers",
   "version": "1.0.0",
-  "description": "",
+  "description": "Checkers game, about theme one piece, in this version the players, can only move in diagonals and capture.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

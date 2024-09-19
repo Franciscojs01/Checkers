@@ -45,8 +45,6 @@ function resetarVariaveis() {
     definirMatrizInicial();
 }
 
-//implementar condição de vitória.
-
 function realizarMovimento(tela, coluna, linha, colunaClicada, linhaClicada) {
     if (tela == 1) {
         const direcaoColuna = coluna - colunaClicada;
@@ -122,6 +120,41 @@ function realizarMovimento(tela, coluna, linha, colunaClicada, linhaClicada) {
     }
 }
 
+function verificarVitoria(matriz, jogador, percorreLinha, percorreColuna) {
+    let contagemJogador1 = 0; 
+    let contagemJogador2 = 0;
+  
+    if (jogador == 1) {
+        for (percorreLinha = 0; percorreLinha < 8; percorreLinha++) {
+            for (percorreColuna = 0; percorreColuna < 8; percorreColuna++) {
+                 if (matriz[percorreLinha][percorreColuna] == jogador) {
+                     contagemJogador1++;
+                 } 
+            }
+        }
+        
+        if (contagemJogador1 == 0) {
+            console.log("jogador 2 venceu!");
+        
+        }
+      
+    } else if (jogador == 2) {
+        for (percorreLinha = 0; percorreLinha < 8; percorreLinha++) {
+            for (percorreColuna = 0; percorreColuna < 8; percorreColuna++) {
+                 if (matriz[percorreLinha][percorreColuna] == jogador) {
+                     contagemJogador2++;
+                 } 
+            }
+        }
+      
+        if (contagemJogador2 == 0) {
+            console.log("jogador 1 venceu!");
+        
+        }
+    }
+    
+    
+}
 function preload() {
     imagemEducador = loadImage("aquiles.jpg");
     imagemAluno = loadImage("chico.jpeg");

@@ -1,0 +1,19 @@
+{
+  "name": "checkers",
+  "version": "1.0.0",
+  "description": "Checkers game, about theme one piece, in this version the players, can only move in diagonals and capture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Franciscojs01/Checkers.git"
+  },
+  "author": "Franciscojs01",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Franciscojs01/Checkers/issues"
+  },
+  "homepage": "https://github.com/Franciscojs01/Checkers#readme"
+}

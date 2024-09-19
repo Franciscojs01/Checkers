@@ -121,39 +121,39 @@ function realizarMovimento(tela, coluna, linha, colunaClicada, linhaClicada) {
 }
 
 function verificarVitoria(matriz, jogador, percorreLinha, percorreColuna) {
-    let contagemJogador1 = 0; 
+    let contagemJogador1 = 0;
     let contagemJogador2 = 0;
-  
+
     if (jogador == 1) {
         for (percorreLinha = 0; percorreLinha < 8; percorreLinha++) {
             for (percorreColuna = 0; percorreColuna < 8; percorreColuna++) {
-                 if (matriz[percorreLinha][percorreColuna] == jogador) {
-                     contagemJogador1++;
-                 } 
+                if (matriz[percorreLinha][percorreColuna] == jogador) {
+                    contagemJogador1++;
+                }
             }
         }
-        
+
         if (contagemJogador1 == 0) {
             console.log("jogador 2 venceu!");
-        
+
         }
-      
+
     } else if (jogador == 2) {
         for (percorreLinha = 0; percorreLinha < 8; percorreLinha++) {
             for (percorreColuna = 0; percorreColuna < 8; percorreColuna++) {
-                 if (matriz[percorreLinha][percorreColuna] == jogador) {
-                     contagemJogador2++;
-                 } 
+                if (matriz[percorreLinha][percorreColuna] == jogador) {
+                    contagemJogador2++;
+                }
             }
         }
-      
+
         if (contagemJogador2 == 0) {
             console.log("jogador 1 venceu!");
-        
+
         }
     }
-    
-    
+
+
 }
 function preload() {
     imagemEducador = loadImage("aquiles.jpg");
@@ -279,43 +279,44 @@ function draw() {
 }
 
 function mousePressed() {
+    if (mouseX <= 475 && mouseY <= 475) {
+        const coluna = floor(mouseX / larguraQuadrado);
+        const linha = floor(mouseY / larguraQuadrado);
 
-    const coluna = floor(mouseX / larguraQuadrado);
-    const linha = floor(mouseY / larguraQuadrado);
+        if (matriz[linha][coluna] == jogador) {
+            linhaClicada = linha;
+            colunaClicada = coluna;
+            estadoPeca = pecaMovimentada;
 
-    if (matriz[linha][coluna] == jogador) {
-        linhaClicada = linha;
-        colunaClicada = coluna;
-        estadoPeca = pecaMovimentada;
-
-    } else if (matriz[linha][coluna] === 0) {
-        realizarMovimento(tela, coluna, linha, colunaClicada, linhaClicada);
-        verificarVitoria(matriz, jogador);
+        } else if (matriz[linha][coluna] === 0) {
+            realizarMovimento(tela, coluna, linha, colunaClicada, linhaClicada);
+            verificarVitoria(matriz, jogador);
+        }
     }
 }
-    function mouseClicked() {
-        if (mouseX > 160 && mouseX < 300 && mouseY > 102 && mouseY < 140 && tela == 0) {
-            console.log("clicou pra jogar");
-            tela = 1;
-            somMenu.play();
-        } else if (mouseX > 300 && mouseX < 440 && mouseY > 450 && mouseY < 490 && tela != 0 && tela != 1) {
-            console.log("clicou no voltar ");
-            tela = 0;
-            somMenu.play();
-        } else if (mouseX > 160 && mouseX < 300 && mouseY > 150 && mouseY < 191 && tela == 0) {
-            console.log("clicou na Instruções");
-            tela = 2;
-            somMenu.play();
-        } else if (mouseX > 160 && mouseX < 300 && mouseY > 200 && mouseY < 240 && tela == 0) {
-            console.log("clicou nos Creditos");
-            tela = 3;
-            somMenu.play();
-        }
+function mouseClicked() {
+    if (mouseX > 160 && mouseX < 300 && mouseY > 102 && mouseY < 140 && tela == 0) {
+        console.log("clicou pra jogar");
+        tela = 1;
+        somMenu.play();
+    } else if (mouseX > 300 && mouseX < 440 && mouseY > 450 && mouseY < 490 && tela != 0 && tela != 1) {
+        console.log("clicou no voltar ");
+        tela = 0;
+        somMenu.play();
+    } else if (mouseX > 160 && mouseX < 300 && mouseY > 150 && mouseY < 191 && tela == 0) {
+        console.log("clicou na Instruções");
+        tela = 2;
+        somMenu.play();
+    } else if (mouseX > 160 && mouseX < 300 && mouseY > 200 && mouseY < 240 && tela == 0) {
+        console.log("clicou nos Creditos");
+        tela = 3;
+        somMenu.play();
     }
+}
 
-    function keyPressed() {
-        if (key === "Escape") {
-            resetarVariaveis();
-            musica.setVolume(0.1);
-        }
+function keyPressed() {
+    if (key === "Escape") {
+        resetarVariaveis();
+        musica.setVolume(0.1);
     }
+}

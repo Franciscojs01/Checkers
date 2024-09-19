@@ -290,7 +290,7 @@ function mousePressed() {
 
     } else if (matriz[linha][coluna] === 0) {
         realizarMovimento(tela, coluna, linha, colunaClicada, linhaClicada);
-
+        verificarVitoria(matriz, jogador);
     }
 }
     function mouseClicked() {

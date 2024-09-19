@@ -1,2 +1,2 @@
-# V1.0 Checkers game.
->This version have movements and capture.
+# V1.1 Checkers game.
+>This version you can win the game.
